@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from "../../../../lib/posts";
+import { getAllPostIds, getPostData } from "../../../lib/posts";
 import Image from "next/image";
 import Link from "next/link";
 
