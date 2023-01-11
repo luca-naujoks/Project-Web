@@ -8,7 +8,7 @@ export default function Layout({ children }) {
       >
         <div
           id="sidebar"
-          className="flex justify-between bg-[#161b22] md:block shadow-xl px-3 xs:w-18 md:w-40 lg:w-[15%] transition-transform duration-300 ease-in-out"
+          className="flex justify-between h-screen bg-[#161b22] md:block shadow-xl px-3 xs:w-18 md:w-40 lg:w-[15%] transition-transform duration-300 ease-in-out"
           x-show="sidenav"
         >
           <div>

@@ -28,7 +28,7 @@ export default function page() {
       </div>
       <div
         id="controls"
-        className="flex justify-between items-center border-2 border-gray-500 rounded-md"
+        className="flex justify-between items-center border-2 border-gray-500 rounded-md mt-10"
       >
         <div className="flex">
           <div className="border-2 border-gray-500 rounded-md w-40 h-40 ml-3 my-3">
