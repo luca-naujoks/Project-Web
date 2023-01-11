@@ -26,21 +26,34 @@ export default function page() {
         <div className="border-2 border-gray-500 rounded-md w-[81%] h-128"></div>
         <div className="border-2 border-gray-500 rounded-md w-[18%]"></div>
       </div>
-      <div
-        id="controls"
-        className="flex justify-between items-center border-2 border-gray-500 rounded-md mt-10"
-      >
+
+
+
+      <div id="controls" className="flex justify-between items-center mt-28">
         <div className="flex">
-          <div className="border-2 border-gray-500 rounded-md w-40 h-40 ml-3 my-3">
-            5 Coins
+          <div className="border-2 border-gray-500 rounded-md w-40 h-40 my-3 cursor-pointer">
+            <img
+              src="/assets/Casino/Coins_Down.png"
+              alt="Coins Up"
+              className="mx-auto"
+            />
+            <div className="flex justify-center">5 Coins</div>
           </div>
-          <div className="border-2 border-gray-500 rounded-md w-40 h-40 ml-3 my-3">
-            25 Coins
+          <div className="border-2 border-gray-500 rounded-md w-40 h-40 ml-3 my-3 cursor-pointer">
+            <img
+              src="/assets/Casino/Coins_Up.png"
+              alt="Coins Up"
+              className="mx-auto"
+            />
+            <div className="flex justify-center">25 Coins</div>
           </div>
         </div>
 
-        <div className="flex border-2 border-gray-500 rounded-md w-40 h-40 mr-3 my-3">
-          Flip
+        <div className="flex">
+          <div className="border-2 border-gray-500 rounded-md w-40 h-40 my-3 cursor-pointer">
+            <img src="/assets/Casino/Flip.png" alt="" className="mx-auto" />
+            <div className="flex justify-center">Flip</div>
+          </div>
         </div>
       </div>
     </div>

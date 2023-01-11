@@ -9,7 +9,7 @@ export default function Home() {
     <div className="m-5">
       <main className="m-5">
         <div className="flex justify-center">
-          <h1 className="text-4xl underline m-2"> Nooble </h1>
+          <h1 className="text-4xl underline m-2 text-gray-500"> Nooble </h1>
         </div>
         <hr className="m-3 border-neutral-900 border-1" />
 
@@ -19,7 +19,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF1 Eigene rolle im Betrieb kennenlernen
               </h2>
             </div>
@@ -31,7 +31,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF2 Arbeitsplätze richtig Ausstatten
               </h2>
             </div>
@@ -43,7 +43,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
           >
             <div className="">
-              <h2 className="text-xl underline">LF3 Netzwerktechnik</h2>
+              <h2 className="text-xl underline text-gray-500">LF3 Netzwerktechnik</h2>
             </div>
             <div className="hover:transform-none">
               <div>
@@ -160,7 +160,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">LF4 Schutzbedarfsanalyse</h2>
+              <h2 className="text-xl underline text-gray-500">LF4 Schutzbedarfsanalyse</h2>
             </div>
             <div className=""></div>
           </Link>
@@ -170,7 +170,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
           >
             <div className="">
-              <h2 className="text-xl underline">LF5 Datenbanken</h2>
+              <h2 className="text-xl underline text-gray-500">LF5 Datenbanken</h2>
             </div>
             <div className="hover:transform-none">
               <div>
@@ -272,7 +272,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF6 Serviceanfragen bearbeiten
               </h2>
             </div>
@@ -286,7 +286,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105 "
           >
             <div className="">
-              <h2 className="text-xl underline">LF7 Cyber-physische Systeme</h2>
+              <h2 className="text-xl underline text-gray-500">LF7 Cyber-physische Systeme</h2>
             </div>
             <div className="hover:transform-none">
               <span className="text-green-400 font-mono">date</span>:{" "}
@@ -377,7 +377,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF8 System übergreifende daten bereitstellen
               </h2>
             </div>
@@ -389,7 +389,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF9 netzwerke & Dienste bereitstellen
               </h2>
             </div>
@@ -408,7 +408,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF10 Serverdienste & Adminaufgaben Automatisieren
               </h2>
             </div>
@@ -420,7 +420,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF11 Betrieb & Sicherheit vernetzter Systeme
               </h2>
             </div>
@@ -432,7 +432,7 @@ export default function Home() {
             className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
           >
             <div className="">
-              <h2 className="text-xl underline">
+              <h2 className="text-xl underline text-gray-500">
                 LF12 Kundenspezifische Systemintegration
               </h2>
             </div>

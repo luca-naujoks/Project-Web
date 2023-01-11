@@ -3,25 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Post({ params }) {
-  const { id } = params
-  const postData = await getPost(id)
+  const { id } = params;
+  const postData = await getPost(id);
   return (
     <div>
       <div className="">
-        <div className="flex justify-between transition duration-600  px-5 items-center">
+        <div className="flex justify-center transition duration-600  px-5 items-center">
           <div className="mt-3"></div>
 
-          <h1 className="text-5xl"> Nooble </h1>
-
-          <div className="mt-3">
-            <Link href="/nooble">
-              <p className="md:text-2xl hover:text-red-500">&#x2718;</p>
-            </Link>
-          </div>
+          <h1 className="text-5xl text-gray-500"> Nooble </h1>
         </div>
 
         <main className="">
-          <div className="py-5 bg-[#161b22] rounded-md ml-[2.5%] m-2 xs:w-auto xl:w-[50%] text-3xl p-10">
+          <div className="py-5 bg-[#161b22] rounded-md ml-[2.5%] m-2 xs:w-auto xl:w-[50%] text-3xl p-10 text-gray-500">
             <h2>{postData.title}</h2>
           </div>
 
@@ -30,7 +24,7 @@ export default async function Post({ params }) {
             {postData.info}
           </div>
 
-          <div className="float-left bg-[#161b22]  xl:w-[50%] xs:w-auto rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%]">
+          <div className="float-left bg-[#161b22]  xl:w-[50%] xs:w-auto rounded-md p-10 text-xl text-white mt-2 mb-1 mr-2 ml-[2.5%] text-gray-500">
             <h3 className="underline">Weiterführende Links zum Lernfeld:</h3>
             <a href={postData.link1} target="_blank">
               {postData.title1}
@@ -70,7 +64,7 @@ export async function generateStaticParams() {
   const paths = getAllPostIds();
   return paths.map((p) => ({
     id: p.params.id,
-  }))
+  }));
 }
 
 async function getPost(id) {

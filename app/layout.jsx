@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           {}
           <div className={isHub ? "flex justify-between bg-[#161b22]" : "flex justify-between"}>
             <Link href="/">
-              <div className="transition flex items-center hover:text-sky-600 font-bold text-lg duration-200">
+              <div className="transition flex items-center text-gray-500 hover:text-sky-600 font-bold text-lg duration-200">
                 <img
                   src="/Axolotl_Logo.png"
                   alt="Bobby"

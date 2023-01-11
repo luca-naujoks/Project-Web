@@ -7,8 +7,8 @@ export default function aboutme() {
         <span className="block mx-auto w-1/2"></span>
 
         <div>
-          <h1 className="flex xs:text-2xl md:text-4xl text-white justify-center py-2">
-            💬 My Social Media 💬
+          <h1 className="flex xs:text-2xl md:text-4xl text-white justify-center py-2 text-gray-500">
+            My Social Media
           </h1>
           <hr className="border-neutral-900 border-1" />
           <div className="flex justify-center">
@@ -52,9 +52,9 @@ export default function aboutme() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-4">
+        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-4 text-gray-500">
           {" "}
-          👨🏻‍💻 &nbsp;A Little Bit About Me &nbsp; 👨🏻‍💻
+          About Me
         </h2>
 
         <div className="rounded-md bg-[#161b22] p-5 mb-6">
@@ -152,111 +152,125 @@ export default function aboutme() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-2">
+        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-2 text-gray-500">
           {" "}
-          🚀 &nbsp;Some Tools / Languages I Use&nbsp; 🚀
+          Some Tools / Languages I Use
         </h2>
 
-        <div className="flex justify-start grid-cols-3">
+        <div className="flex justify-center grid-cols-3 mt-3">
           <img
             src="/assets/about_me/vscode.svg"
             alt="vscode"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/PyCharm.svg"
             alt="PyCharm"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/IntelliJ.svg"
             alt="IntelliJ"
             width="45"
             height="45"
+            className="mx-1"
           />
         </div>
 
-        <div className="flex justify-start grid-cols-4 mt-3">
+        <div className="flex justify-center grid-cols-4 mt-3">
           <img
             src="/assets/about_me/docker.svg"
             alt="docker"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/linux.svg"
             alt="linux"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/Windows.png"
             alt="Windows"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/Mac.png"
             alt="Mac OS/IOS"
             width="45"
             height="45"
+            className="mx-1"
           />
         </div>
 
-        <div className="flex justify-start grid-cols-5 mt-3">
+        <div className="flex justify-center grid-cols-5 mt-3">
           <img
             src="/assets/about_me/java.png"
             alt="java"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/python.svg"
             alt="python"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/javascript.svg"
             alt="javascript"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/html5.svg"
             alt="html"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/css3.svg"
             alt="css3"
             width="45"
             height="45"
+            className="mx-1"
           />
         </div>
 
-        <div className="flex justify-start grid-cols-2 mb-5 mt-3">
+        <div className="flex justify-center grid-cols-2 mb-5 mt-3">
           <ing
             src="/assets/about_me/git.svg"
             alt="git"
             width="45"
             height="45"
+            className="mx-1"
           />
           <img
             src="/assets/about_me/mysql.svg"
             alt="mysql"
             width="45"
             height="45"
+            className="mx-1"
           />
         </div>
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-md sm:text-lg md:text-4xl justify-center py-2">
-          &lt;../&gt; Discord | Bots | Programming &lt;\..&gt;
+        <h2 className="flex xs:text-md sm:text-lg md:text-4xl justify-center py-2 text-gray-500">
+          Discord | Bots | Programming
         </h2>
 
         <div className="rounded-md bg-[#161b22] p-5 mt-5 ">

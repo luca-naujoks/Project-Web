@@ -40,7 +40,7 @@ export function Auth({ req }) {
             document.getElementById("auth").classList.add("rounded-md");
           }}
         >
-          <p className="xs:text-sm md:text-md">{session.user.name}&nbsp;</p>
+          <p className="xs:text-sm md:text-md text-gray-500">{session.user.name}&nbsp;</p>
           <img
             src={session.user.image}
             className="rounded-full xs:h-7 md:h-10 "
