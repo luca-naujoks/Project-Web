@@ -130,6 +130,27 @@ export default function aboutme() {
           <p>
             <span className="text-sky-400 font-mono">]</span>
           </p>
+
+          <p className="mt-4">
+            <span className="text-green-400 font-mono">
+              current_projects
+            </span>
+            :
+          </p>
+          <p>
+            <span className="text-sky-400 font-mono">[</span>
+          </p>
+          <p>
+            {" "}
+            <span className="text-sky-400 font-mono">
+              <span className="text-white font-mono pl-5" >"</span><a href="/project-money">Project Money</a> 
+              <span className="text-white font-mono">"</span>
+            </span>
+          </p>
+          <p>
+            <span className="text-sky-400 font-mono">]</span>
+          </p>
+
           <p className="mt-4">
             <span className="text-green-400 font-mono">currently_learning</span>
             :{" "}
