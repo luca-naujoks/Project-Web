@@ -40,9 +40,9 @@ export default function Index() {
             href="/hub"
             className="border-4 border-[#374455] rounded-xl w-1/4 p-4 hover:scale-105 duration 700 transition ease-in-out text-white"
           >
-            <h2 className="xs:text-xl md:text-2xl pb-2 text-gray-500">Bobby Hub &rarr;</h2>
+            <h2 className="xs:text-xl md:text-2xl pb-2 text-gray-500">Hub &rarr;</h2>
             <p className="xs:hidden md:block text-gray-500">
-              A hub with a dashboard, todo lists and a casino
+              A hub with a dashboard, todo lists and a arcade
             </p>
           </a>
         </div>

@@ -139,8 +139,8 @@ export default function Page() {
         </div>
       </div>
       <hr className="m-3 border-gray-600" />
-      <div id="casino">
-        <Link href="/hub/casino">
+      <div id="arcade">
+        <Link href="/hub/arcade">
           <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
             <h1 className="pb-2 md:text-2xl">
               <img
@@ -148,7 +148,7 @@ export default function Page() {
                 alt="lists"
                 className="w-8 h-8 fill-current inline-block"
               />
-              <span className="text-gray-500"> Casino</span>
+              <span className="text-gray-500"> Arcade</span>
             </h1>
           </div>
         </Link>

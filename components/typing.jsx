@@ -16,8 +16,8 @@ export const TypingText = ({ text }) => {
   }, [textIndex]);
 
   return (
-    <p className="typing-text font-mono text-5xl leading-tight text-gray-800">
+    <span className="typing-text font-mono text-5xl leading-tight text-gray-800">
       {typing ? text.substring(0, textIndex + 1) : text}
-    </p>
+    </span>
   );
 };

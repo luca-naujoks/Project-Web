@@ -59,7 +59,7 @@ return (
                     alt="lists"
                     className="w-8 h-8 fill-current inline-block "
                   />
-                  <span className="xs:hidden md:inline text-lg"> Casino</span>
+                  <span className="xs:hidden md:inline text-lg"> Arcade</span>
                 </a>
 
                 <p className="text-center xs:hidden md:block text-xl">
@@ -68,7 +68,7 @@ return (
                 <hr />
                 <a
                   key="Home"
-                 
+                 href="/hub/lists"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img

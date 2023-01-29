@@ -36,7 +36,7 @@ export default function Layout({ children }) {
             <div id="menu" className="flex flex-col">
               <div className="flex flex-col md:space-y-2">
                 <a
-                  id="dashboardbtn"
+                  href="/hub/arcade"
                   className="hover:scale-105 text-sm font-medium text-white py-2 px-0 hover:bg-gray-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
@@ -47,7 +47,7 @@ export default function Layout({ children }) {
                   <span className="xs:hidden md:inline text-lg"> Welcome</span>
                 </a>
                 <a
-                  href="/hub/casino"
+                  href="/hub/arcade"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
@@ -64,7 +64,7 @@ export default function Layout({ children }) {
                 <p className="text-center xs:hidden md:block text-xl">Games</p>
                 <hr />
                 <a
-                  href="/hub/casino/coinflip"
+                  href="/hub/arcade/coinflip"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
@@ -79,7 +79,7 @@ export default function Layout({ children }) {
                 </a>
 
                 <a
-                  href="/hub/casino/slotmachines"
+                  href="/hub/arcade/slotmachines"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
@@ -88,6 +88,28 @@ export default function Layout({ children }) {
                     className="w-8 h-8 fill-current inline-block "
                   />
                   <span className="xs:hidden md:inline text-lg"> Slotis</span>
+                </a>
+                <a
+                  href="/hub/arcade/pachisi"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                >
+                  <img
+                    src="/assets/hub/lists.png"
+                    alt="lists"
+                    className="w-8 h-8 fill-current inline-block "
+                  />
+                  <span className="xs:hidden md:inline text-lg"> Pachisi</span>
+                </a>
+                <a
+                  href="/hub/arcade/project-money"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                >
+                  <img
+                    src="/assets/hub/lists.png"
+                    alt="lists"
+                    className="w-8 h-8 fill-current inline-block "
+                  />
+                  <span className="xs:hidden md:inline text-lg"> Project-Money</span>
                 </a>
               </div>
             </div>

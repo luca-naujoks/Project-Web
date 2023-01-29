@@ -31,7 +31,7 @@ export function Auth({ req }) {
 
   if (status === "authenticated") {
     return (
-      <div id="auth" className="">
+      <div id="auth">
         <a
           className="flex m-2 cursor-default items-center justify-center cursor-pointer"
           onClick={function () {
