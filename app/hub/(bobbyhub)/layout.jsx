@@ -51,7 +51,7 @@ return (
                   </span>
                 </a>
                 <a
-                  href="/hub/casino"
+                  href="/hub/arcade"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
                   <img
