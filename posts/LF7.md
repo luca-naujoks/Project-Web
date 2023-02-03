@@ -1,17 +1,18 @@
 ---
-title: "Lernfeld 7 Cyber Physische Systeme"
-info: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+title: "Lernfeld 7 Cyber Physische Syteme"
+info: ""
 
 link1: 
 title1: 
 
-link2:  
-title2: 
+link2: https://github.com/luca-naujoks/Itech-IT2x
+title2: GitHub Repository
 
-link3:
-title3:
+link3: 
+title3: 
 
 link4: 
-title4:
-image: ""
+title4: 
+
+image: 
 ---

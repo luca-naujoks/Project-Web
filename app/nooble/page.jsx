@@ -1,8 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { Auth } from "../../components/auth";
+
+
 
 export default function Home() {
   return (
@@ -27,15 +25,107 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/nooble"
-            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+            href="/nooble/LF2"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
           >
             <div className="">
               <h2 className="text-xl underline text-gray-500">
                 LF2 Arbeitsplätze richtig Ausstatten
               </h2>
             </div>
-            <div className=""></div>
+            <div className="hover:transform-none">
+              <div>
+                <span className="text-green-400 font-mono">berufsschule</span>:{" "}
+                <span className="text-sky-400 font-mono">Itech BS 14</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">date</span>:{" "}
+                <span className="text-sky-400 font-mono">
+                  09.01-31.02.23
+                </span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">
+                  fields_of_interests
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Web
+                  Development<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Hardware Configuration<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Programming<span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">
+                  technical_devices
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Web-Server
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">products</span>:
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  correct Schutzbedarfsanalyse
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Scootech Scooter Booking Programm
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+            </div>
           </Link>
 
           <Link
@@ -156,13 +246,82 @@ export default function Home() {
 
         <div className="flex xs:flex-col lg:flex-row">
           <Link
-            href="/nooble"
-            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+            href="/nooble/LF4"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:scale-105"
           >
             <div className="">
               <h2 className="text-xl underline text-gray-500">LF4 Schutzbedarfsanalyse</h2>
             </div>
-            <div className=""></div>
+            <div className="hover:transform-none">
+              <div>
+                <span className="text-green-400 font-mono">berufsschule</span>:{" "}
+                <span className="text-sky-400 font-mono">Itech BS 14</span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">date</span>:{" "}
+                <span className="text-sky-400 font-mono">
+                  09.01-31.02.23
+                </span>
+              </div>
+              <br></br>
+              <div>
+                <span className="text-green-400 font-mono">
+                  fields_of_interests
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">
+                  technical_devices
+                </span>
+                :
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <div>
+                <span className="text-green-400 font-mono">products</span>:
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">[</span>
+              </div>
+              <div>
+                {" "}
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>
+                  Schutzbedarfsanalyse
+                  <span className="font-mono text-white">"</span>
+                </span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">]</span>
+              </div>
+              <br></br>
+            </div>
           </Link>
 
           <Link
