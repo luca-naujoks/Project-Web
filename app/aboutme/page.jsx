@@ -293,11 +293,11 @@ export default function aboutme() {
         <h2 className="flex xs:text-md sm:text-lg md:text-4xl justify-center py-2 text-gray-500">
           Discord | Bots | Programming
         </h2>
-
+        
         <div className="rounded-md bg-[#161b22] p-5 mt-5 ">
           <p>
             <span className="text-green-400 font-mono">name</span>:{" "}
-            <span className="text-sky-400 font-mono">Bobby Bot / Bobby69</span>
+            <a className="text-sky-400 font-mono" href="/bobbybot">Bobby Bot / Bobby69</a>
           </p>
           <p>
             <span className="text-green-400 font-mono">current_job</span>:{" "}

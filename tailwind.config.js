@@ -19,11 +19,15 @@ module.exports = {
       
     },
     extend: {
+      colors: {
+        'myblue': '#161b22',
+      },
+
       spacing: {
         '128': '32rem',
         '200': '40rem',
         '250': '50rem',
-        '300': '50rem',
+        '300': '60rem',
       },
     },
   },
