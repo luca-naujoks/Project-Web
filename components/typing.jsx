@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const TypingText = ({ text }) => {
+export const TypingText = ({ text, size, time, color}) => {
   const [textIndex, setTextIndex] = useState(0);
   const [typing, setTyping] = useState(true);
 
@@ -11,12 +11,12 @@ export const TypingText = ({ text }) => {
       if (textIndex === text.length - 1) {
         setTyping(false);
       }
-    }, 100);
+    }, time);
     return () => clearTimeout(timeout);
   }, [textIndex]);
 
   return (
-    <span className="typing-text font-mono text-5xl leading-tight text-gray-800">
+    <span className= "typing-text font-mono  leading-tight {color} {size}">
       {typing ? text.substring(0, textIndex + 1) : text}
     </span>
   );

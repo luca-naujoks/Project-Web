@@ -487,11 +487,18 @@ export default function Home() {
                 <span className="text-sky-400 font-mono">[</span>
               </div>
               <div>
-                {" "}
                 <span className="text-sky-400 font-mono">
-                  <span className="text-white font-mono pl-5"> "</span>---
+                  <span className="text-white font-mono pl-5"> "</span>Server
                   <span className="font-mono text-white">"</span>
                 </span>
+                <span className="text-sky-400 font-mono">,</span>
+              </div>
+              <div>
+                <span className="text-sky-400 font-mono">
+                  <span className="text-white font-mono pl-5"> "</span>Mongodb Database
+                  <span className="font-mono text-white">"</span>
+                </span>
+                <span className="text-sky-400 font-mono">,</span>
               </div>
               <div>
                 <span className="text-sky-400 font-mono">]</span>

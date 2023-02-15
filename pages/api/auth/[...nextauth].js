@@ -9,7 +9,7 @@ export const authOptions = {
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID,
       clientSecret: process.env.DISCORD_CLIENT_SECRET,
-     authorization: {params: {scope: "identify"}}
+     authorization: {params: {scope: "identify email"}}
     })
     // ...add more providers here
   ],

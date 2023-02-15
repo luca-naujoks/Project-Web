@@ -1,6 +1,6 @@
 ---
 title: "Lernfeld 7 Cyber Physische Syteme"
-info: ""
+info: "Empty"
 
 link1: 
 title1: 
@@ -14,5 +14,5 @@ title3:
 link4: 
 title4: 
 
-image: 
+image: "empty"
 ---
