@@ -71,7 +71,7 @@ class BobbyBot(commands.Bot):
 
     BobbyBot
     Oh no uu loose NOOB
-    --------------------------------------------------------
+    -----------------------
     Bobby68
     waifu
 
@@ -130,7 +130,7 @@ class BobbyBot(commands.Bot):
           </div>
         </div>
         <div>
-          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg">{code}</pre>
+          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg h-225 w-128">{code}</pre>
         </div>
       </div>
       <div id="commands" className="lg:flex xs:flex-row md:justify-around h-screen">
@@ -165,25 +165,27 @@ class BobbyBot(commands.Bot):
           </div>
 
         </div>
-        <div className="bg-myblue rounded-lg w-200 h-128">
-          <pre className="p-3 text-sm rounded-lg text-gray-500"><TypingText text={chat} color="text-gray-500" size="text-md" time="30"/></pre>
+        <div className="bg-myblue rounded-lg w-128 h-225">
+          <pre className="p-3 text-sm rounded-lg text-gray-500 "><TypingText text={chat} color="text-gray-500" size="text-md" time="30"/></pre>
         </div>
       </div>
-      <div id="arcade" className="lg:flex xs:flex-row md:justify-evenly h-screen">
+      <div id="arcade" className="lg:flex xs:flex-row md:justify-evenly">
         <div className="p-3 mt-[10%]">
           <h1 className="text-3xl font-bold">Bobbys Arcade</h1>
           <h2 className="text-3xl font-bold">System behnint the bot and web Arcade</h2>
 
           <div id="where" className="mt-3">
             <p>
-              
+            The Arcade System is an interactive platform that includes a Discord bot and a website.
             </p>
-            <p></p>
+            <p>Both use the same MongoDB database to store and synchronize scores, leaderboards</p>
+            <p>and rewards.</p>
           </div>
           <div id="what" className="mt-3">
             <p>
-              
+            The Discord bot allows users to play various games directly in the chat,
             </p>
+            <p>while the website provides an appealing user interface with Nextjs 13 and React.</p>
           </div>
           <div id="suiiii" className="mt-3">
             <p>
@@ -192,7 +194,7 @@ class BobbyBot(commands.Bot):
           </div>
         </div>
         <div>
-          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg">{code}</pre>
+          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg  h-225 w-128"></pre>
         </div>
       </div>
     </div>

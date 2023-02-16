@@ -1,13 +1,15 @@
+"use client"
 import Image from "next/image";
+
 
 export default function aboutme() {
   return (
     <div className="m-5 ">
-      <main className="bg-black">
+      <div className="bg-black">
         <span className="block mx-auto w-1/2"></span>
 
         <div>
-          <h1 className="flex xs:text-2xl md:text-4xl text-white justify-center py-2 text-gray-500">
+          <h1 className="flex xs:text-2xl md:text-4xl justify-center py-2 text-gray-500">
             My Social Media
           </h1>
           <hr className="border-neutral-900 border-1" />
@@ -52,7 +54,7 @@ export default function aboutme() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-4 text-gray-500">
+        <h2 className="flex xs:text-lg md:text-4xl  justify-center py-4 text-gray-500">
           {" "}
           About Me
         </h2>
@@ -173,7 +175,7 @@ export default function aboutme() {
 
         <hr className="border-neutral-900 border-1" />
 
-        <h2 className="flex xs:text-lg md:text-4xl text-white justify-center py-2 text-gray-500">
+        <h2 className="flex xs:text-lg md:text-4xl  justify-center py-2 text-gray-500">
           {" "}
           Some Tools / Languages I Use
         </h2>
@@ -293,8 +295,8 @@ export default function aboutme() {
         <h2 className="flex xs:text-md sm:text-lg md:text-4xl justify-center py-2 text-gray-500">
           Discord | Bots | Programming
         </h2>
-        
-        <div className="rounded-md bg-[#161b22] p-5 mt-5 ">
+
+        <div className="rounded-md bg-[#161b22] p-5 mt-5 " onClick={location.href = "/bobbybot"}>
           <p>
             <span className="text-green-400 font-mono">name</span>:{" "}
             <a className="text-sky-400 font-mono" href="/bobbybot">Bobby Bot / Bobby69</a>
@@ -383,7 +385,7 @@ export default function aboutme() {
             </a>
           </p>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
