@@ -1,74 +1,54 @@
 "use client";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { TypingText } from "../../components/typing";
-
-export const checkBot = async () => {
-  const botToken = "YOUR_BOT_TOKEN_HERE";
-  const headers = {
-    Authorization: `Bot ${botToken}`,
-  };
-  try {
-    const response = await axios.get("https://discord.com/api/gateway/bot", {
-      headers,
-    });
-    if (response.status === 200) {
-      console.log("Bot is online and connected to Discord API");
-      return "Online";
-    }
-    console.log("Failed to connect to Discord API");
-    return "Offline";
-  } catch (error) {
-    console.error("Failed to connect to Discord API", error);
-    return "Error 112";
-  }
-};
 
 export default function Page() {
   var dt = "dt";
   var code = `
-import discord
-from discord.ext import commands
+  import discord
+  from discord.ext import commands
+  
+  import os, datetime, time
+  
+  client = discord.Client()
+  e = ""
+  
+  class BobbyBot(commands.Bot):
 
-import os, datetime, time
-
-client = discord.Client()
-e = ""
-
-class BobbyBot(commands.Bot):
-
-    > def __init__(self, token: str):
-        
-
-        def init_cogs(self):
+  > def __init__(self, token: str):
+  
+  
+  def init_cogs(self):
             e = ""
             files = os.listdir("cogs")
             cogs = []
             now = datetime.datetime.now()
             dt = now.strftime("%d/%m/%Y %H:%M:%S")
             for f in files:
-                if not f.startswith("__"):
-                    if f.endswith(".py"):
-                        cogs.append(f[:-3])
-
+            if not f.startswith("__"):
+            if f.endswith(".py"):
+            cogs.append(f[:-3])
+            
             if not cogs:
-                print("Couldnt find any cogs to load")
+            print("Couldnt find any cogs to load")
             else:
-                for cog in cogs:
-                    print("Loading Module: " + cog + "")
-
-    > def run(self):
-    `
-    var chat = `
+            for cog in cogs:
+            print("Loading Module: " + cog + "")
+            
+            > def run(self):
+            `
+var chat = `
     Bobby68
     headortails
-
+              
     BobbyBot
     you against the bank
     Chose your side Head or Tail
-
+    
     Bobby68
     Head
-
+    
     BobbyBot
     Oh no uu loose NOOB
     -----------------------
@@ -77,10 +57,30 @@ class BobbyBot(commands.Bot):
 
     Bobby68
     clear 1
-
+    
     BobbyBot
     1 Message deleted successfully
-        `
+    `
+const [bot_status, setbot_status] = useState()
+    
+    async function get_bot_status() {
+      const headers = {
+        Authorization: `Bot ${process.env.botToken}`,
+      };
+       const response = await axios.get("https://discord.com/api/gateway/bot", {
+          headers,
+        });
+        if (response.status === 200) {
+              console.log("Bot is online and connected to Discord API");
+              setbot_status("online")
+            }
+            console.log("Failed to connect to Discord API");
+            setbot_status("offline")
+    }
+
+useEffect(() => {
+  get_bot_status();
+})
 
   return (
     <div className="m-5">
@@ -89,7 +89,7 @@ class BobbyBot(commands.Bot):
           <h1 className="text-3xl font-bold">Bobby Bot</h1>
           <h2 className="text-3xl font-bold">Working System behind the Bot</h2>
 
-          <div id="python" className="mt-3">
+          <div id="python" className="mt-12">
             <p>
               My bot is a comprehensive system designed to offer a seamless user
               experience.
@@ -110,7 +110,7 @@ class BobbyBot(commands.Bot):
             </p>
             <p>preferences, and settings.</p>
           </div>
-          <div id="youtube-dl" className="mt-3">
+          <div id="youtube-dl" className="mt-12">
             <p>
               In addition to this, the bot includes music functionality with the
               popular YouTube-dl library.{" "}
@@ -129,15 +129,16 @@ class BobbyBot(commands.Bot):
             </p>
           </div>
         </div>
-        <div>
-          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg h-225 w-128">{code}</pre>
+        <div className="bg-myblue rounded-lg h-225 w-128">
+          <pre className="p-3 text-sm text-gray-500 ">{code}</pre>
+          <pre className="p-3 text-sm text-gray-500">    {bot_status}</pre>
         </div>
       </div>
       <div id="commands" className="lg:flex xs:flex-row md:justify-around h-screen">
         <div className="p-3">
           <h2 className="text-3xl font-bold">Command System</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div class=" p-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className=" p-4">
               <h2 className="text-xl font-bold">Music</h2>
                 <p>- play (p)</p>
                 <p>- pause</p>
@@ -145,20 +146,20 @@ class BobbyBot(commands.Bot):
                 <p>- skip</p>
                 <p>- leave (l)</p>
             </div>
-            <div class=" p-4">
+            <div className=" p-4">
               <h2 className="text-xl font-bold">Arcade</h2>
                 <p>- new</p>
                 <p>- wallet</p>
                 <p>- headortail</p>
             </div>
-            <div class=" p-4">
+            <div className=" p-4">
               <h2 className="text-xl font-bold">Else</h2>
                 <p>- info</p>
                 <p>- clear</p>
                 <p>- valo</p>
                 <p>- csgo</p>
             </div>
-            <div class=" p-4">
+            <div className=" p-4">
               <h2 className="text-xl font-bold">FSK18</h2>
                 <p>- waifu</p>
             </div>
@@ -174,7 +175,7 @@ class BobbyBot(commands.Bot):
           <h1 className="text-3xl font-bold">Bobbys Arcade</h1>
           <h2 className="text-3xl font-bold">System behnint the bot and web Arcade</h2>
 
-          <div id="where" className="mt-3">
+          <div id="where" className="mt-12">
             <p>
             The Arcade System is an interactive platform that includes a Discord bot and a website.
             </p>
