@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import React from "react";
 import Link from "next/link";
 
 export default function Page() {
-  
+  const { status } = useSession
+
   const [showip, setshowip] = useState();
   const [showversion, setshowversion] = useState();
   const [shownetwork, setshownetwork] = useState();

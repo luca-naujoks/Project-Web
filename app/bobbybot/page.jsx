@@ -110,7 +110,6 @@ var chat = `
         </div>
         <div className="bg-myblue rounded-lg h-225 w-128">
           <pre className="p-3 text-sm text-gray-500 ">{code}</pre>
-          <pre className="p-3 text-sm text-gray-500">    {bot_status}</pre>
         </div>
       </div>
       <div id="commands" className="lg:flex xs:flex-row md:justify-around h-screen">
