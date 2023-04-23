@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { TypingText } from "../../components/typing";
 
@@ -61,26 +60,6 @@ var chat = `
     BobbyBot
     1 Message deleted successfully
     `
-const [bot_status, setbot_status] = useState()
-    
-    async function get_bot_status() {
-      const headers = {
-        Authorization: `Bot ${process.env.botToken}`,
-      };
-       const response = await axios.get("https://discord.com/api/gateway/bot", {
-          headers,
-        });
-        if (response.status === 200) {
-              console.log("Bot is online and connected to Discord API");
-              setbot_status("online")
-            }
-            console.log("Failed to connect to Discord API");
-            setbot_status("offline")
-    }
-
-useEffect(() => {
-  get_bot_status();
-})
 
   return (
     <div className="m-5">
