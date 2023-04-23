@@ -37,6 +37,7 @@ return (
               <div className="flex flex-col md:space-y-2">
                 <a
                   id="dashboardbtn"
+                  href="/hub"
                   
                   className="hover:scale-105 text-sm font-medium text-white py-2 px-0 hover:bg-gray-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >

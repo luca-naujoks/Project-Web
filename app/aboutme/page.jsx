@@ -3,6 +3,11 @@ import Image from "next/image";
 
 
 export default function aboutme() {
+
+  function bobbybothref() {
+    location.href = "/bobbybot"
+  }
+
   return (
     <div className="m-5 ">
       <div className="bg-black">
@@ -296,7 +301,7 @@ export default function aboutme() {
           Discord | Bots | Programming
         </h2>
 
-        <div className="rounded-md bg-[#161b22] p-5 mt-5 " onClick={location.href = "/bobbybot"}>
+        <div className="rounded-md bg-[#161b22] p-5 mt-5 " onClick={bobbybothref}>
           <p>
             <span className="text-green-400 font-mono">name</span>:{" "}
             <a className="text-sky-400 font-mono" href="/bobbybot">Bobby Bot / Bobby69</a>

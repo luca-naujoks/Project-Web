@@ -1,16 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { signIn, useSession } from "next-auth/react";
 import React from "react";
 import Link from "next/link";
 
 export default function Page() {
-  const { status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      window.location.href = signIn();
-    },
-  });
   
   const [showip, setshowip] = useState();
   const [showversion, setshowversion] = useState();
