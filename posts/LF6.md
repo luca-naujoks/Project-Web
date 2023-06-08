@@ -2,8 +2,8 @@
 title: ""
 info: ""
 
-link1: 
-title1: 
+link1: "/nooble/chat"
+title1: "AI chat"
 
 link2: https://github.com/luca-naujoks/Itech-IT2x
 title2: GitHub Repository

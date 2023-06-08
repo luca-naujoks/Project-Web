@@ -427,8 +427,8 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/nooble"
-            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10 hover:transform-none"
+            href="/nooble/LF6"
+            className="bg-[#161b22] rounded-md xs:w-auto lg:w-2/6 m-4 transition-all duration-600 p-10  hover:scale-105"
           >
             <div className="">
               <h2 className="text-xl underline text-gray-500">
