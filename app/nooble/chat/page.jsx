@@ -13,29 +13,44 @@ export default function Chat() {
   ]);
 
   const chatContainerRef = useRef(null);
-
+  
+  const fetchData = async (message) => {
+    try {
+      const response = await axios.post("http://localhost:8000/api", { message });
+      const data = response.data;
+      console.log(data.result);
+      
+      const newMessage = { id: "Ai", text: data.result };
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
+    } catch (error) {
+      console.log("connection error occurred:", error);
+      const errorMessage = {id: "Ai", text: "I am Not Connected at the moment please try Later or restart all services"}
+      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+    }
+  };
+  
+  const clearMessages = () => {
+    setMessages([]);
+    const newMessage = { id: "Ai", text: "Hey, Ich bin die ITECH AI und hier um dir zu helfen. Frage mich einfach nach technischen Fragen."};
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
+  }
 
   const addMessage = () => {
     if (inputValue.trim() !== "") {
       const newMessage = { id: "chat", text: inputValue };
       setMessages((prevMessages) => [...prevMessages, newMessage]);
       setInputValue("");
-      const newAiMessage = {
-        id: "AI",
-        text: "Sorry, I am not connected at the moment.",
-      };
       setTimeout(() => {
-        setMessages((prevMessages) => [...prevMessages, req]);
+        fetchData(newMessage.text,);
       }, 1000);
     }
   };
-
+  
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       addMessage();
     }
   };
-
 
   useEffect(() => {
     chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
@@ -51,12 +66,18 @@ export default function Chat() {
           <MessageList messages={messages} />
         </div>
 
-        <div className="mt-auto">
-          <div id="input" className="flex bg-[#374455] m-2 rounded-md">
+        <div className="mt-auto flex items-center">
+          <img
+            src="../assets/nooble/clear_chat.png"
+            alt="clear"
+            className="w-10 ml-2 cursor-pointer bg-[#374455] p-2 rounded-l-md"
+            onClick={clearMessages}
+          />
+          <div className="flex bg-[#374455] rounded-md w-full">
             <input
-            id="input_user"
+              id="input_user"
               type="text"
-              className="w-full bg-[#374455] pl-2 rounded-l-md focus:outline-none"
+              className="w-full bg-[#374455] pl-2 focus:outline-none"
               placeholder="Send a Question to our Chat AI"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -69,7 +90,7 @@ export default function Chat() {
               <img
                 src="../assets/nooble/right-arrow.png"
                 alt="Send"
-                className="w-6"
+                className="w-6 "
               />
             </button>
           </div>
