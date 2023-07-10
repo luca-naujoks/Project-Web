@@ -11,9 +11,11 @@
 2. Open http://localhost:3000 to View the Site.
 
 ## Ai Chat Dependencies
-The Ai chat behind [/nooble/chat](http://localhost:3000/nooble/chat) is only available with the appropriate API and Google colab ai model.  
-As ai a LoRA model from the following [git repo](https://www.bing.com/search?pglt=161&q=LLaMA-LoRA+Tuner&cvid=c2d1d1f8e02044cd8845fb7ea16e12f0&aqs=edge..69i57j69i60l2.1412j0j1&FORM=ANNTA1&PC=U531) is used.  
-The API for the connection must be written by yourself, because there is no js documentation (only python) to use the gradio app.  
+
+The ai chat behind [/nooble/chat](http://localhost:3000/nooble/chat) is only available with the appropriate API and Google colab ai model.  
+The ai used is a LoRA model from the following [git repo](https://github.com/zetavg/LLaMA-LoRA-Tuner).  
+The API for the connection has to be written by yourself,  
+as there is no js documentation (only python) to use the gradio app directly with nextjs.  
 
 ## Python API endpoint (/ai)
 My python api server to connect Web and Ai
