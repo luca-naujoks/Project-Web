@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import { TypingText } from "../../components/typing";
 
 export default function Page() {
@@ -36,8 +35,8 @@ export default function Page() {
             print("Loading Module: " + cog + "")
             
             > def run(self):
-            `
-var chat = `
+            `;
+  var chat = `
     Bobby68
     headortails
               
@@ -59,51 +58,54 @@ var chat = `
     
     BobbyBot
     1 Message deleted successfully
-    `
+    `;
 
   return (
     <div className="m-5">
-      <div id="system" className="lg:flex xs:flex-row md:justify-evenly h-screen">
+      <div
+        id="system"
+        className="lg:flex xs:flex-row md:justify-evenly h-screen"
+      >
         <div className="p-3 mt-[10%]">
           <h1 className="text-3xl font-bold">Bobby Bot</h1>
-          <h2 className="text-3xl font-bold">Working System behind the Bot</h2>
+          <h2 className="text-3xl font-bold">Working system behind the bot</h2>
 
           <div id="python" className="mt-12">
             <p>
-              My bot is a comprehensive system designed to offer a seamless user
-              experience.
+              My Bot is a comprehensive system designed to provide a seamless
+              user experience.
             </p>
             <p>
-              Built with Python 3.10, it leverages the latest language features
-              to ensure fast and efficient
+              Built with Python 3.10, it uses the latest language features to
+              ensure fast and efficient
             </p>
             <p>performance.</p>
           </div>
           <div id="database" className="mt-3">
             <p>
-              The bot is connected to a SQL database, providing a reliable and
-              secure method for storing user data.{" "}
+              The bot is connected to an SQL database, providing a reliable and
+              secure method of storing data.{" "}
             </p>
             <p>
-              With this feature, users can securely store their personal data,{" "}
+              This feature allows users to securely store their data, preferences and settings.
             </p>
-            <p>preferences, and settings.</p>
+            <br/>
           </div>
-          <div id="youtube-dl" className="mt-12">
+          <div id="youtube-dl" className="">
             <p>
-              In addition to this, the bot includes music functionality with the
-              popular YouTube-dl library.{" "}
+              In addition, the bot includes music functionality with the popular
+              YouTube-dl library.{" "}
             </p>
             <p>
-              This integration allows users to search for and play music
-              directly within the bot, without{" "}
+              This integration allows users to search and play music directly
+              within the bot, without{" "}
             </p>
             <p>
-              having to navigate to external sites or applications. With a vast
-              library of music available{" "}
+              having to navigate to external sites or applications. With a huge
+              library of music{" "}
             </p>
             <p>
-              on YouTube, the possibilities for musical entertainment are
+              on YouTube, the possibilities for musical entertainment are are
               endless.
             </p>
           </div>
@@ -112,68 +114,82 @@ var chat = `
           <pre className="p-3 text-sm text-gray-500 ">{code}</pre>
         </div>
       </div>
-      <div id="commands" className="lg:flex xs:flex-row md:justify-around h-screen">
+      <div
+        id="commands"
+        className="lg:flex xs:flex-row md:justify-around h-screen"
+      >
         <div className="p-3">
           <h2 className="text-3xl font-bold">Command System</h2>
           <div className="grid grid-cols-2 gap-4">
             <div className=" p-4">
               <h2 className="text-xl font-bold">Music</h2>
-                <p>- play (p)</p>
-                <p>- pause</p>
-                <p>- resume</p>
-                <p>- skip</p>
-                <p>- leave (l)</p>
+              <p>- play (p)</p>
+              <p>- pause</p>
+              <p>- resume</p>
+              <p>- skip</p>
+              <p>- leave (l)</p>
             </div>
             <div className=" p-4">
               <h2 className="text-xl font-bold">Arcade</h2>
-                <p>- new</p>
-                <p>- wallet</p>
-                <p>- headortail</p>
+              <p>- new</p>
+              <p>- wallet</p>
+              <p>- headortail</p>
             </div>
             <div className=" p-4">
               <h2 className="text-xl font-bold">Else</h2>
-                <p>- info</p>
-                <p>- clear</p>
-                <p>- valo</p>
-                <p>- csgo</p>
+              <p>- info</p>
+              <p>- clear</p>
+              <p>- valo</p>
+              <p>- csgo</p>
             </div>
             <div className=" p-4">
               <h2 className="text-xl font-bold">FSK18</h2>
-                <p>- waifu</p>
+              <p>- waifu</p>
             </div>
           </div>
-
         </div>
         <div className="bg-myblue rounded-lg w-128 h-225">
-          <pre className="p-3 text-sm rounded-lg text-gray-500 "><TypingText text={chat} color="text-gray-500" size="text-md" time="30"/></pre>
+          <pre className="p-3 text-sm rounded-lg text-gray-500 ">
+            <TypingText
+              text={chat}
+              color="text-gray-500"
+              size="text-md"
+              time="30"
+            />
+          </pre>
         </div>
       </div>
       <div id="arcade" className="lg:flex xs:flex-row md:justify-evenly">
         <div className="p-3 mt-[10%]">
           <h1 className="text-3xl font-bold">Bobbys Arcade</h1>
-          <h2 className="text-3xl font-bold">System behnint the bot and web Arcade</h2>
+          <h2 className="text-3xl font-bold">
+            System behnint the bot and web Arcade
+          </h2>
 
           <div id="where" className="mt-12">
             <p>
-            The Arcade System is an interactive platform that includes a Discord bot and a website.
+              The Arcade System is an interactive platform that includes a
+              Discord bot and a website.
             </p>
-            <p>Both use the same MongoDB database to store and synchronize scores, leaderboards</p>
+            <p>
+              Both use the same MongoDB database to store and synchronise
+              scores, leaderboards
+            </p>
             <p>and rewards.</p>
           </div>
           <div id="what" className="mt-3">
             <p>
-            The Discord bot allows users to play various games directly in the chat,
+              The Discord Bot allows users to play different games directly in
+              the chat,
             </p>
-            <p>while the website provides an appealing user interface with Nextjs 13 and React.</p>
-          </div>
-          <div id="suiiii" className="mt-3">
             <p>
-
+              while the website has an attractive user interface using Nextjs 13
+              and React.
             </p>
           </div>
         </div>
         <div>
-          <pre className="p-3 text-sm text-gray-500 bg-myblue rounded-lg  h-225 w-128"></pre>
+          <pre className="p-3 text-sm text-gray-500 rounded-lg  h-225 w-128"></pre>
         </div>
       </div>
     </div>

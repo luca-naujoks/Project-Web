@@ -1,12 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
-
+import { useState } from "react";
 
 export default function aboutme() {
-
-  function bobbybothref() {
-    location.href = "/bobbybot"
-  }
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   return (
     <div className="m-5 ">
@@ -137,12 +134,8 @@ export default function aboutme() {
           <p>
             <span className="text-sky-400 font-mono">]</span>
           </p>
-
           <p className="mt-4">
-            <span className="text-green-400 font-mono">
-              current_projects
-            </span>
-            :
+            <span className="text-green-400 font-mono">current_projects</span>:
           </p>
           <p>
             <span className="text-sky-400 font-mono">[</span>
@@ -150,30 +143,29 @@ export default function aboutme() {
           <p>
             {" "}
             <span className="text-sky-400 font-mono">
-              <span className="text-white font-mono pl-5" >"</span><a href="/project-money">Project Money</a> 
+              <span className="text-white font-mono pl-5">"</span>
+              <a>Shadow Agent</a>
               <span className="text-white font-mono">"</span>
             </span>
           </p>
           <p>
             <span className="text-sky-400 font-mono">]</span>
           </p>
-
           <p className="mt-4">
             <span className="text-green-400 font-mono">currently_learning</span>
             :{" "}
-            <span className="text-sky-400 font-mono">["Docker, Angular"]</span>
+            <span className="text-sky-400 font-mono">[""]</span>
           </p>
           <p>
-            <span className="text-green-400 font-mono">2022 Goals</span>:{" "}
+            <span className="text-green-400 font-mono">{currentYear} Goals</span>:{" "}
             <span className="text-sky-400 font-mono">
-              ["Learn Angular and progress in Docker"]
+              [""]
             </span>
           </p>
           <p>
             <span className="text-green-400 font-mono">hobbies</span>:{" "}
             <span className="text-sky-400 font-mono">
-              ["Gaming", "Programming", "Firefighter", "Diving", "play with
-              hardware"]
+              ["Gaming", "Programming", "Voluntary firefighting", "Diving", "Playing with Hardware"]
             </span>
           </p>
         </div>
@@ -301,10 +293,14 @@ export default function aboutme() {
           Discord | Bots | Programming
         </h2>
 
-        <div className="rounded-md bg-[#161b22] p-5 mt-5 " onClick={bobbybothref}>
+        <div
+          className="rounded-md bg-[#161b22] p-5 mt-5 "
+        >
           <p>
             <span className="text-green-400 font-mono">name</span>:{" "}
-            <a className="text-sky-400 font-mono" href="/bobbybot">Bobby Bot / Bobby69</a>
+            <a className="text-sky-400 font-mono" href="/bobbybot">
+              Bobby Bot / Bobby69
+            </a>
           </p>
           <p>
             <span className="text-green-400 font-mono">current_job</span>:{" "}
@@ -384,6 +380,16 @@ export default function aboutme() {
             <a
               href="https://discord.com/oauth2/authorize?client_id=864513968935927809&permissions=8&scope=bot"
               target="blank"
+              className="text-gray-500 font-mono underline"
+            >
+              here
+            </a>
+          </p>
+          <p>
+            <span className="text-green-400 font-mono">More Information</span>:{" "}
+            <span className="text-sky-400 font-mono">Clicking </span>
+            <a
+              href="/bobbybot"
               className="text-gray-500 font-mono underline"
             >
               here
