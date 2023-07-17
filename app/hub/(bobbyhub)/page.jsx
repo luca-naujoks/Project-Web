@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 
 export default function Page() {
-  const { status } = useSession
+  const { status } = useSession;
 
   const [showip, setshowip] = useState();
   const [showversion, setshowversion] = useState();
@@ -68,7 +68,7 @@ export default function Page() {
     <div id="main">
       <div id="random" className="flex">
         <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96">
-          <h1 className="pb-2 md:text-2xl">GitHub Repository</h1>
+          <h1 className="pb-2 md:text-2xl text-gray-500">GitHub Repository</h1>
           <span className="text-gray-500">Repository:</span>
           <a
             href="https://github.com/luca-naujoks/web-project"
@@ -79,7 +79,7 @@ export default function Page() {
           </a>
         </div>
         <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mx-1 md:m-3 p-2 md:w-96 ">
-          <h1 className="pb-2 md:text-2xl">Localisation</h1>
+          <h1 className="pb-2 md:text-2xl text-gray-500">Localisation</h1>
           <p className="text-gray-500">{showcountry}</p>
           <p className="text-gray-500">{showcity}</p>
           <p className="text-gray-500">
@@ -110,7 +110,7 @@ export default function Page() {
           </span>
         </div>
         <div className="bg-[#161b22] rounded-xl m-3 p-2 w-96 xs:hidden md:block">
-          <h1 className="pb-2 md:text-2xl">Loading...</h1>
+          <h1 className="pb-2 md:text-2xl text-gray-500">Loading...</h1>
           <div className="md:text-xl"></div>
         </div>
       </div>
@@ -151,42 +151,42 @@ export default function Page() {
       <hr className="m-3 border-gray-600" />
 
       <div id="todo btns" className="flex">
-        <div
-          className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer"
-          key="Home"
-          onClick={() => listbtn("Home")}
-        >
-          <h1 className="pb-2 md:text-2xl">
-            <img
-              src="../assets/hub/lists.png"
-              alt="lists"
-              className="w-8 h-8 fill-current inline-block"
-            />
-            <span className="text-gray-500"> Home</span>
-          </h1>
-        </div>
-
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
-          <h1 className="pb-2 md:text-2xl">
-            <img
-              src="../assets/hub/lists.png"
-              alt="lists"
-              className="w-8 h-8 fill-current inline-block"
-            />
-            <span className="text-gray-500"> Dailys</span>
-          </h1>
-        </div>
-
-        <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
-          <a className="pb-2 md:text-2xl">
-            <img
-              src="../assets/hub/lists.png"
-              alt="lists"
-              className="w-8 h-8 fill-current inline-block"
-            />
-            <span className="text-gray-500"> Weekly</span>
-          </a>
-        </div>
+        <a href="/hub/lists?list=Home">
+          <div className="bg-[#161b22] rounded-xl xs:my-3 xs:ml-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
+            <h1 className="pb-2 md:text-2xl">
+              <img
+                src="../assets/hub/lists.png"
+                alt="lists"
+                className="w-8 h-8 fill-current inline-block"
+              />
+              <span className="text-gray-500"> Home</span>
+            </h1>
+          </div>
+        </a>
+        <a href="/hub/lists?list=Dailys">
+          <div className="bg-[#161b22] rounded-xl xs:my-3 xs:m-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
+            <h1 className="pb-2 md:text-2xl">
+              <img
+                src="../assets/hub/lists.png"
+                alt="lists"
+                className="w-8 h-8 fill-current inline-block"
+              />
+              <span className="text-gray-500"> Dailys</span>
+            </h1>
+          </div>
+        </a>
+        <a href="/hub/lists?list=Weekly">
+          <div className="bg-[#161b22] rounded-xl xs:my-3 xs:mr-2 md:m-3 p-2 w-96 hover:scale-105 duration-300 cursor-pointer">
+            <a className="pb-2 md:text-2xl">
+              <img
+                src="../assets/hub/lists.png"
+                alt="lists"
+                className="w-8 h-8 fill-current inline-block"
+              />
+              <span className="text-gray-500"> Weekly</span>
+            </a>
+          </div>
+        </a>
       </div>
 
       <hr className="m-3 border-gray-600" />
