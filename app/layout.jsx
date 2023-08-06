@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   const isHub = useSelectedLayoutSegment() == "hub";
   return (
     <html lang="en">
-      <body className="">
+      <body className="h-screen">
         <SessionProvider>
           {}
           <div className={isHub ? "flex justify-between bg-[#161b22]" : "flex justify-between"}>

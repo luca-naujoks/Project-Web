@@ -1,162 +1,136 @@
-"use client"
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
 export default function Chat() {
-  const [inputValue, setInputValue] = useState(""); // Input value
+  const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([
     {
-      id: "1", // Message ID
-      chat_id: "Ai", // Chat ID (Ai or Chat)
-      text: "Hey, Ich bin LUNA. Frag mich einfach irgendwie und ich gucke was ich tun kann :))", // Message content
+      id: 1,
+      text: "Hey, Ich bin die ITECH AI und hier um dir zu helfen. Frage mich einfach nach technischen Fragen.",
     },
   ]);
-  const [loading, setLoading] = useState(false); // Loading state
 
-  // Ref for chat container
   const chatContainerRef = useRef(null);
 
-  // Function to fetch data from API
   const fetchData = async (message) => {
-    setLoading(true);
-
     try {
-      const response = await axios.post("http://localhost:8000/ai", {
+      const response = await axios.post("http://localhost:8000/itech", {
         message,
       });
       const data = response.data;
       console.log(data.result);
 
-      // Create a new message object
-      const newMessage = {
-        id: generateUniqueId(),
-        chat_id: "Ai", // Chat ID (Ai or Chat)
-        text: data.result, // Message content
-      };
-      setMessages((prevMessages) => [...prevMessages, newMessage]); // Add new message to the messages array
-
+      const newMessage = { id: "Ai", text: data.result };
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
     } catch (error) {
       console.log("connection error occurred:", error);
-
       const errorMessage = {
-        id: generateUniqueId(),
-        chat_id: "Ai", // Chat ID (Ai or Chat)
-        text: "I am Not Connected at the moment please try Later or restart all services", // Error message content
+        id: "Ai",
+        text: "I am Not Connected at the moment please try Later or restart all services",
       };
-      setMessages((prevMessages) => [...prevMessages, errorMessage]); // Add error message to the messages array
-    } finally {
-      setLoading(false); // Set loading state back to false after fetching data
+      setMessages((prevMessages) => [...prevMessages, errorMessage]);
     }
   };
 
-  // Function to clear all messages
   const clearMessages = () => {
     setMessages([]);
-    setChat("");
-    // Create the initial message object
-    const initialMessage = {
-      id: generateUniqueId(), // Generate a unique ID for the message
-      chat_id: "Ai", // Chat ID (Ai or Chat)
-      text: "Hey, Ich bin LUNA. Frag mich einfach irgendwie und ich gucke was ich tun kann :))", // Message content
+    const newMessage = {
+      id: "Ai",
+      text: "Hey, Ich bin die ITECH AI und hier um dir zu helfen. Frage mich einfach nach technischen Fragen.",
     };
-    setMessages([initialMessage]); // Set the messages array with the initial message
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
   };
 
-  // Function to add a new message
   const addMessage = () => {
     if (inputValue.trim() !== "") {
-      // Create a new message object
-      const newMessage = {
-        id: generateUniqueId(), // Generate a unique ID for the message
-        chat_id: "Chat", // Chat ID (Ai or Chat)
-        text: inputValue, // Message content
-      };
-      setMessages((prevMessages) => [...prevMessages, newMessage]); // Add new message to the messages array
-      
-      setInputValue(""); // Clear the input value
+      const newMessage = { id: "chat", text: inputValue };
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
+      setInputValue("");
       setTimeout(() => {
-        fetchData(messages.text); // Fetch data after a delay
+        fetchData(newMessage.text);
       }, 1000);
     }
   };
 
-  // Function to handle key down events
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       addMessage();
     }
   };
 
-  // Scroll to the bottom of the chat container when messages change
   useEffect(() => {
     chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
   }, [messages]);
 
-
-
-  // Render the Chat component
   return (
-    <div className="min-h-300 justify-center">
-      <div className=" bg-[#161b22] rounded-xl flex flex-col min-h-300">
-        <div ref={chatContainerRef} className="flex flex-col flex-1 overflow-auto no-scrollbar">
-          <MessageList messages={messages} /> {/* Render the message list */}
+    <div className="h-screen">
+    <div className="flex xs:h-[90%] justify-center xl:my-12 xs:my-6">
+      <div className="h-5/6 xl:w-1/2 xs:mx-6 bg-[#161b22] rounded-xl flex flex-col">
+        <div
+          ref={chatContainerRef}
+          className="flex flex-col flex-1 overflow-auto no-scrollbar"
+        >
+          <MessageList messages={messages} />
         </div>
 
-        {loading && (
-          // Display the loading indicator if loading state is true
-          <div className="flex justify-start items-center mx-5">
-            <img src="../assets/nooble/Thinking-Axolotl.gif" alt="Loading..." className="w-20" />
-          </div>
-        )}
-
-        <div className="mt-auto flex items-center">
-          <div className="flex bg-[#374455] rounded-md w-full mb-5 mx-5">
-            <button className="rounded-tr-md rounded-br-md px-2 py-3" onClick={clearMessages}>
-              <img src="../assets/nooble/clear_chat.png" alt="Send" className="w-10" />
-            </button>
+        <div className="mt-auto bg-[#374455] rounded-md flex items-center m-2">
+          <img
+            src="../assets/nooble/clear_chat.png"
+            alt="clear"
+            className="w-10 ml-2 cursor-pointer bg-[#374455] rounded-l-md"
+            onClick={clearMessages}
+          />
+          <div className="flex w-full">
             <input
               id="input_user"
               type="text"
               className="w-full bg-[#374455] pl-2 focus:outline-none"
-              placeholder="Type here to chat with LUNA ..."
+              placeholder="Ask me a few questions"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
             />
-            <button className="rounded-tr-md rounded-br-md px-2 py-3" onClick={addMessage}>
-              <img src="../assets/nooble/right-arrow.png" alt="Send" className="w-6" />
+            <button
+              className="rounded-tr-md rounded-br-md px-2 py-3"
+              onClick={addMessage}
+            >
+              <img
+                src="../assets/nooble/right-arrow.png"
+                alt="Send"
+                className="w-6 "
+              />
             </button>
           </div>
         </div>
       </div>
     </div>
+    </div>
   );
 }
 
-// MessageList component
 const MessageList = ({ messages }) => {
   return (
-    <div className="flex flex-col p-5" id="chat_window">
+    <div className="flex flex-col p-5">
       {messages.map((message) => (
         <div
           key={message.id}
           className={`${
-            message.chat_id === "Chat"
+            message.id === "chat"
               ? "bg-[#374455] ml-auto rounded-l-md rounded-br-md"
               : "bg-gray-800 rounded-r-md rounded-bl-md mr-auto"
           } p-2 text-gray-300 mx-5 mb-2 flex-row${
-            message.chat_id === "Chat" ? "-reverse" : ""
+            message.id === "chat" ? "-reverse" : ""
           }`}
         >
-          {splitTextIntoLines(message.text, 70)} {/* Split long messages into lines */}
+          {splitTextIntoLines(message.text, 70)}
         </div>
       ))}
     </div>
   );
 };
 
-// Function to split text into lines
 function splitTextIntoLines(text, maxLineLength) {
   if (text.length <= maxLineLength) {
     return text;
@@ -167,7 +141,7 @@ function splitTextIntoLines(text, maxLineLength) {
   let currentLine = "";
 
   for (let i = 0; i < words.length; i++) {
-    if (currentLine.length + words[i].length + 1 > maxLineLength) {
+    if ((currentLine + words[i]).length > maxLineLength) {
       lines.push(currentLine);
       currentLine = words[i] + " ";
     } else {
@@ -177,9 +151,4 @@ function splitTextIntoLines(text, maxLineLength) {
 
   lines.push(currentLine.trim());
   return lines.map((line, index) => <div key={index}>{line}</div>);
-}
-
-// Function to generate a unique ID
-function generateUniqueId() {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }

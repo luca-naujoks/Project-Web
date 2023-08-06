@@ -1,14 +1,14 @@
 export default function Layout({ children }) {
   return (
-    <div className="font-poppins antialiased bg-[#161b22]">
+    <div className="font-poppins antialiased bg-[#161b22] h-screen w-screen fixed">
       <div
         id="view"
-        className="h-full flex flex-row"
+        className="h-screen flex flex-row"
         x-data="{ sidenav: true }"
       >
         <div
           id="sidebar"
-          className="flex justify-between bg-[#161b22] h-screen md:block shadow-xl px-3 xs:w-18 md:w-40 lg:w-[15%] transition-transform duration-300 ease-in-out"
+          className="flex justify-between bg-[#161b22] h-full md:block shadow-xl px-3 xs:w-18 md:w-40 lg:w-[15%] transition-transform duration-300 ease-in-out"
           x-show="sidenav"
         >
           <div>
@@ -46,7 +46,17 @@ export default function Layout({ children }) {
                 </p>
                 <hr />
                 <a
-                  key="Home"
+                  href="/hub/ai"
+                  className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
+                >
+                  <img
+                    src="../assets/hub/chat.png"
+                    alt="lists"
+                    className="w-8 h-8 fill-current inline-block "
+                  />
+                  <span className="xs:hidden md:inline text-lg"> LUNA</span>
+                </a>
+                <a
                   href="/hub/lists?list=Home"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
@@ -59,7 +69,6 @@ export default function Layout({ children }) {
                 </a>
 
                 <a
-                  key="Dailys"
                   href="/hub/lists?list=Dailys"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >
@@ -72,7 +81,6 @@ export default function Layout({ children }) {
                 </a>
 
                 <a
-                  key="Einkaufen"
                   href="/hub/lists?list=Weeklys"
                   className="text-sm font-medium text-white py-2 px-1 hover:bg-gray-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out cursor-pointer"
                 >

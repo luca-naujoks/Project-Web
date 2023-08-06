@@ -87,9 +87,10 @@ export default function Page() {
               secure method of storing data.{" "}
             </p>
             <p>
-              This feature allows users to securely store their data, preferences and settings.
+              This feature allows users to securely store their data,
+              preferences and settings.
             </p>
-            <br/>
+            <br />
           </div>
           <div id="youtube-dl" className="">
             <p>

@@ -153,19 +153,19 @@ export default function aboutme() {
           </p>
           <p className="mt-4">
             <span className="text-green-400 font-mono">currently_learning</span>
-            :{" "}
-            <span className="text-sky-400 font-mono">[""]</span>
+            : <span className="text-sky-400 font-mono">[""]</span>
           </p>
           <p>
-            <span className="text-green-400 font-mono">{currentYear} Goals</span>:{" "}
-            <span className="text-sky-400 font-mono">
-              [""]
+            <span className="text-green-400 font-mono">
+              {currentYear} Goals
             </span>
+            : <span className="text-sky-400 font-mono">[""]</span>
           </p>
           <p>
             <span className="text-green-400 font-mono">hobbies</span>:{" "}
             <span className="text-sky-400 font-mono">
-              ["Gaming", "Programming", "Voluntary firefighting", "Diving", "Playing with Hardware"]
+              ["Gaming", "Programming", "Voluntary firefighting", "Diving",
+              "Playing with Hardware"]
             </span>
           </p>
         </div>
@@ -293,9 +293,7 @@ export default function aboutme() {
           Discord | Bots | Programming
         </h2>
 
-        <div
-          className="rounded-md bg-[#161b22] p-5 mt-5 "
-        >
+        <div className="rounded-md bg-[#161b22] p-5 mt-5 ">
           <p>
             <span className="text-green-400 font-mono">name</span>:{" "}
             <a className="text-sky-400 font-mono" href="/bobbybot">
@@ -388,10 +386,7 @@ export default function aboutme() {
           <p>
             <span className="text-green-400 font-mono">More Information</span>:{" "}
             <span className="text-sky-400 font-mono">Clicking </span>
-            <a
-              href="/bobbybot"
-              className="text-gray-500 font-mono underline"
-            >
+            <a href="/bobbybot" className="text-gray-500 font-mono underline">
               here
             </a>
           </p>
