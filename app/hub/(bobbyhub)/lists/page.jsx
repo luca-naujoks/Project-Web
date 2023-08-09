@@ -151,7 +151,8 @@ export default function TodoList() {
             </li>
           ))}
         </ul>
-        <div className="cursor-pointer" onClick={toggleCompletedTodos}>Completed <span>{showCompletedTodos? "🞂" : "🞃"}</span></div>
+        <div className="cursor-pointer text-white" onClick={toggleCompletedTodos}>Completed <span>{showCompletedTodos? "🞂" : "🞃"}</span></div>
+        {showCompletedTodos? <hr className="border-white" />: ""}
         {showCompletedTodos && (
         <ul id="completeditems" className="list-disc mt-6 max-h-64 overflow-y-scroll scrollbar-none">
           {completedTodos.map((todo, index) => (

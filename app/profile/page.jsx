@@ -51,7 +51,6 @@ export default function Page({ req }) {
           <p className="py-2  xs:text-sm sm:text-md md:text-lg">
             Personal Name:{" "}
             <p className="text-gray-600 block xs:text-sm sm:text-md md:text-lg">
-              
             </p>
           </p>
           <p className="py-2 xs:text-sm sm:text-md md:text-lg">

@@ -76,7 +76,7 @@ export function Welcome() {
       return (
         <div className="flex justify-center text-gray-800">
           <p className="flex justify-center text-5xl text-gray-800">
-            <TypingText text={"Hey Conni GLHF <3"} color="text-gray-800" size="text-md" time="50" />
+            <TypingText text={"Hey Conni GLHF <3"} color="text-gray-800" size="text-5xl" time="50" />
           </p>
         </div>
       );
@@ -85,7 +85,7 @@ export function Welcome() {
       return (
         <div className="flex justify-center text-gray-800">
           <p className="flex justify-center text-5xl text-gray-800">
-            <TypingText text={"Welcome Back Master"} color="text-gray-800" size="text-md" time="50" />
+            <TypingText text={"Welcome Back Master"} color="text-gray-800" size="text-5xl" time="50" />
           </p>
         </div>
       );
@@ -93,7 +93,7 @@ export function Welcome() {
     return (
       <div className="flex justify-center text-gray-800">
         <p className="flex justify-center text-gray-800">
-        <pre className=" text-gray-800"><TypingText text={"Welcome back " + session.user.name} color="text-gray-800" size="text-md" time="50"/></pre>
+        <pre className=" text-gray-800"><TypingText text={"Welcome back " + session.user.name} color="text-gray-800" size="text-5xl" time="50"/></pre>
         </p>
       </div>
     );
