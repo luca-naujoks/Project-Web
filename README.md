@@ -1,5 +1,7 @@
 # Project-Web
 
+#This repo has been deprecated and is now developed in [luca-naujoks/nextjs-app](https://github.com/luca-naujoks/nextjs-app).
+
 ## Installation Guide
 
 1. Clone the Repository: `git clone https://github.com/luca-naujoks/Project-Web.git`
